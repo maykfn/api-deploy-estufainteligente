@@ -1,21 +1,17 @@
 const router = require('express').Router()
 
 const Plants = require('../models/Plants') //Importa o modelo das plantas no modelo
-
 //Rotas da API
 //CRIAÇÃO DE DADOS
 router.post('/', async (req, res) => {
 
     //req.body
-  
     //Exemplo de como vai ficar: {nome: "Morango", temperatura: 50, umidadeAr:30, umidadeSolo: 50, diasCultivo: 31 approved: false}
     const {nome, temperaturaMin, temperaturaMax, desc, umidadeAr, umidadeSolo, diasCultivo, imagem, approved} = req.body
   
     if(!nome){
       res.status(422).json({error: 'O nome é obrigatório'})
-  
     }
-  
     const plants ={
       nome,
       temperaturaMin,
@@ -124,7 +120,6 @@ router.post('/', async (req, res) => {
     
 
   })
-
 
   module.exports = router; 
   

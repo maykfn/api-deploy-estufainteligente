@@ -4,7 +4,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config()
 
-
 mongoose.set('strictQuery', false);
 
 //Forma de ler JSON // middlewares
@@ -34,8 +33,3 @@ mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@estufa.odwvbgg.mongodb
   console.log('Conectamos ao MongoDB!')
 })
 .catch((err)=> console.log(err))
-
-
-
-
-//mongodb+srv://mayk442:060820000@apicluster.8nhsoev.mongodb.net/bancodaapi?retryWrites=true&w=majority
