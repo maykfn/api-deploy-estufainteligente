@@ -2,11 +2,14 @@ const mongoose = require('mongoose');
 
 const Plants = mongoose.model('Plants', {
     nome: String,
-    temperatura: Number,
+    temperaturaMin: Number,
+    temperaturaMax: Number,
+    desc: String,
     umidadeAr: Number, 
     umidadeSolo: Number, 
     diasCultivo: Number, 
-    approved: Boolean,
+    imagem: String,
+    approved: Boolean, //Quando ativo na configuração vira true
 
 }) //Cria a tabela chamada Plantas
 
