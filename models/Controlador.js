@@ -5,6 +5,7 @@ const Controlador = mongoose.model('Controlador', {
     temperaturaMin: Number,
     temperaturaMax: Number,
     sensorTemperatura: Number,
+    volTanque: Number,
     umidadeAr: Number, 
     sensorUmidadeAr: Number,
     umidadeSolo: Number, 
