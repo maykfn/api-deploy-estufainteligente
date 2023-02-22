@@ -15,8 +15,10 @@ app.use(
 app.use(express.json())
 
 //Rotas da API
-const plantsRoutes = require('./routes/plantsRoutes')
-app.use('/plants', plantsRoutes)
+const plantsRoutes = require('./routes/plantsRoutes');
+const controladorRoutes = require('./routes/controladorRoutes');
+app.use('/plants', plantsRoutes);
+app.use('/controlador', controladorRoutes);
 
 //entregar uma porta
 
