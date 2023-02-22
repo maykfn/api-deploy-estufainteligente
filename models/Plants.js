@@ -8,6 +8,9 @@ const Plants = mongoose.model('Plants', {
     umidadeAr: Number, 
     umidadeSolo: Number, 
     diasCultivo: Number, 
+    agoar: Number,
+    rad: Number,
+    tipo: String,
     imagem: String,
     approved: Boolean, //Quando ativo na configuração vira true
 

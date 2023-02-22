@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
 
     //req.body
     //Exemplo de como vai ficar: {nome: "Morango", temperatura: 50, umidadeAr:30, umidadeSolo: 50, diasCultivo: 31 approved: false}
-    const {nome, temperaturaMin, temperaturaMax, desc, umidadeAr, umidadeSolo, diasCultivo, imagem, approved} = req.body
+    const {nome, temperaturaMin, temperaturaMax, desc, umidadeAr, umidadeSolo, diasCultivo, agoar, rad, tipo, imagem, approved} = req.body
   
     if(!nome){
       res.status(422).json({error: 'O nome é obrigatório'})
@@ -21,6 +21,9 @@ router.post('/', async (req, res) => {
       umidadeSolo,
       diasCultivo,
       imagem,
+      agoar,
+      rad,
+      tipo,
       approved,
     }
   
@@ -79,7 +82,8 @@ router.post('/', async (req, res) => {
   router.patch('/:id', async (req, res) => {
     const id = req.params.id
 
-    const {nome, temperaturaMin, temperaturaMax, desc, umidadeAr, umidadeSolo, imagem, diasCultivo, approved} = req.body
+    const {nome, temperaturaMin, temperaturaMax, desc, umidadeAr, umidadeSolo, imagem, diasCultivo, 
+      agoar, rad, tipo, approved} = req.body
 
     const plants ={
       nome,
@@ -90,6 +94,9 @@ router.post('/', async (req, res) => {
       umidadeSolo,
       diasCultivo,
       imagem,
+      agoar,
+      rad,
+      tipo,
       approved,
     }
     try {
