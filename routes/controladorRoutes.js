@@ -24,6 +24,7 @@ router.post('/', async (req, res) => {
       refrigerar, 
       luzUV,  
       configAtiva,
+      estufaLigada,
     } = req.body
 
     if(!nome){
@@ -46,6 +47,7 @@ router.post('/', async (req, res) => {
       refrigerar, 
       luzUV,  
       configAtiva,
+      estufaLigada,
     }
   
     //Cria a entidade no Banco de dados, com o create do Mongoose
@@ -120,6 +122,7 @@ router.post('/', async (req, res) => {
       refrigerar, 
       luzUV,  
       configAtiva,
+      estufaLigada,
     } = req.body
 
     const controlador ={
@@ -139,6 +142,7 @@ router.post('/', async (req, res) => {
       refrigerar, 
       luzUV,  
       configAtiva,
+      estufaLigada,
     }
       
     try {

@@ -17,6 +17,7 @@ const Controlador = mongoose.model('Controlador', {
     refrigerar: Boolean,
     luzUV: Boolean,
     configAtiva: Boolean, //Quando ativo na configuração vira true
+    estufaLigada: Boolean,
 
 }) //Cria a tabela chamado Controlador
 
